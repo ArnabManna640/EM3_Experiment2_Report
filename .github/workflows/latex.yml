@@ -24,6 +24,6 @@ jobs:
       - name: Upload compiled PDF
         uses: actions/upload-artifact@v7
         with:
-          name: compiled-pdf
           path: main.pdf
+          archive: false
           if-no-files-found: error
