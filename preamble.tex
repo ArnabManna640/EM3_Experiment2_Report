@@ -1,0 +1,377 @@
+% ============================================================
+% DOCUMENT CLASS
+% ============================================================
+
+% ------------------------------------------------------------
+% Page layout
+% ------------------------------------------------------------
+
+\usepackage[
+    a4paper,
+    top=25mm,
+    bottom=25mm,
+    left=30mm,
+    right=25mm,
+    headheight=15pt
+]{geometry}
+
+% ------------------------------------------------------------
+% Font and typography
+% ------------------------------------------------------------
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Better typesetting
+\usepackage{microtype}
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Paragraph formatting
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% ------------------------------------------------------------
+% Mathematics
+% ------------------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+
+% Physics notation
+\usepackage{physics}
+
+% Units
+\usepackage{siunitx}
+
+\sisetup{
+    separate-uncertainty = true,
+    per-mode = symbol,
+    exponent-product = \cdot,
+    range-phrase = {--},
+    range-units = single
+}
+
+% box equation
+\usepackage{tcolorbox}
+
+% ------------------------------------------------------------
+% Figures and graphics
+% ------------------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+
+% Better control over captions
+\usepackage[
+    font=small,
+    labelfont=bf,
+    format=plain,
+    justification=raggedright,
+    singlelinecheck=false
+]{caption}
+
+
+% Subfigure captions
+\captionsetup[subfigure]{
+    justification=centering,
+    singlelinecheck=false
+}
+
+% ------------------------------------------------------------
+% Tables
+% ------------------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{makecell}
+
+\def\arraystretch{1.5}
+
+% ------------------------------------------------------------
+% Colors
+% ------------------------------------------------------------
+
+\usepackage{xcolor}
+
+% Custom colors if needed
+\definecolor{darkblue}{RGB}{0,50,100}
+\definecolor{darkred}{RGB}{120,0,0}
+\definecolor{darkgreen}{RGB}{0,90,40}
+\definecolor{gray}{RGB}{100,100,100}
+
+% ------------------------------------------------------------
+% Lists
+% ------------------------------------------------------------
+
+\usepackage{enumitem}
+
+\setlist[itemize]{
+    topsep=4pt,
+    itemsep=2pt,
+    parsep=0pt
+}
+
+\setlist[enumerate]{
+    topsep=4pt,
+    itemsep=2pt,
+    parsep=0pt
+}
+
+% ------------------------------------------------------------
+% References and citations
+% ------------------------------------------------------------
+
+\usepackage[
+    backend=biber,
+    style=numeric-comp,
+    sorting=none,
+    giveninits=true,
+    maxbibnames=99
+]{biblatex}
+
+\addbibresource{ref.bib}
+
+% ------------------------------------------------------------
+% Hyperlinks
+% ------------------------------------------------------------
+
+\usepackage[
+    colorlinks=true,
+    linkcolor=darkblue,
+    citecolor=darkgreen,
+    urlcolor=darkred,
+    bookmarks=true,
+    bookmarksopen=true,
+    pdftitle={Your Report Title},
+    pdfauthor={Your Name},
+    pdfsubject={Physics Report}
+]{hyperref}
+
+% Make references clickable
+\usepackage{cleveref}
+
+% ------------------------------------------------------------
+% Headers and footers
+% ------------------------------------------------------------
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Chapter pages use plain style by default;
+% redefine it so they also have page numbers.
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% ------------------------------------------------------------
+% Chapter formatting
+% ------------------------------------------------------------
+
+\usepackage{titlesec}
+
+% Chapter
+\titlespacing*{\chapter}
+{0pt}      % left
+{0pt}      % space before
+{15pt}     % space after
+
+\titleformat{\chapter}
+    {\LARGE\bfseries}
+    {\LARGE \thechapter}
+    {1em}
+    {}
+
+% Section
+\titlespacing*{\section}
+{0pt}
+{18pt}
+{8pt}
+
+\titleformat
+    {\section}
+    {\normalfont\Large\bfseries}
+    {\thesection}
+    {1em}
+    {}
+
+% Subsection
+\titlespacing*{\subsection}
+{0pt}
+{12pt}
+{5pt}
+
+\titleformat
+    {\subsection}
+    {\normalfont\large\bfseries}
+    {\thesubsection}
+    {1em}
+    {}
+
+% Subsubsection
+\titlespacing*{\subsubsection}
+{0pt}
+{10pt}
+{4pt}
+
+\titleformat
+    {\subsubsection}
+    {\normalfont\normalsize\bfseries}
+    {\thesubsubsection}
+    {1em}
+    {}
+
+% ------------------------------------------------------------
+% Tables of contents
+% ------------------------------------------------------------
+
+\usepackage{tocloft}
+
+% ------------------------------------------------------------
+% Algorithms / pseudocode
+% ------------------------------------------------------------
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ------------------------------------------------------------
+% Code listings
+% ------------------------------------------------------------
+
+\usepackage{listings}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{darkblue},
+    commentstyle=\color{darkgreen},
+    stringstyle=\color{darkred},
+    showstringspaces=false,
+    tabsize=4
+}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{RGB}{0,120,0}
+\definecolor{codegray}{RGB}{100,100,100}
+\definecolor{codepurple}{RGB}{130,0,130}
+
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{codegreen},
+    stringstyle=\color{codepurple},
+    numberstyle=\tiny\color{codegray},
+    numbers=left,
+    numbersep=8pt,
+    frame=single,
+    breaklines=true,
+    breakatwhitespace=false,
+    showstringspaces=false,
+    tabsize=4,
+    captionpos=b
+}
+
+\lstset{style=pythonstyle}
+
+
+
+% ------------------------------------------------------------
+% Chemical / particle physics notation
+% ------------------------------------------------------------
+
+\usepackage{hepnames}
+
+% ------------------------------------------------------------
+% Miscellaneous useful packages
+% ------------------------------------------------------------
+
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{afterpage}
+\usepackage{pdfpages}
+
+% ------------------------------------------------------------
+% Custom commands
+% ------------------------------------------------------------
+
+% Physics abbreviations
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\Ham}{\mathcal{H}}
+\newcommand{\M}{\mathcal{M}}
+
+% Common particle-physics notation
+\newcommand{\MET}{\slashed{E}_{T}}
+\newcommand{\pt}{p_{\mathrm{T}}}
+\newcommand{\et}{E_{\mathrm{T}}}
+
+% Cross section
+\newcommand{\xsec}{\sigma}
+
+% Luminosity
+\newcommand{\lumi}{\mathcal{L}}
+
+% Branching ratio
+\newcommand{\BR}{\mathrm{BR}}
+
+% Signal/background
+\newcommand{\sig}{\mathrm{sig}}
+\newcommand{\bkg}{\mathrm{bkg}}
+
+% ------------------------------------------------------------
+% Equation numbering
+% ------------------------------------------------------------
+
+\numberwithin{equation}{chapter}
+
+% ------------------------------------------------------------
+% Figure numbering
+% ------------------------------------------------------------
+
+\numberwithin{figure}{chapter}
+
+% ------------------------------------------------------------
+% Table numbering
+% ------------------------------------------------------------
+
+\numberwithin{table}{chapter}
+
+% ------------------------------------------------------------
+% PDF metadata
+% ------------------------------------------------------------
+
+\hypersetup{
+    pdfcreator={LaTeX},
+    pdfproducer={LaTeX}
+}
+
+% ============================================================
+% END OF PREAMBLE
+% ============================================================
