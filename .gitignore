@@ -1,6 +1,20 @@
 .vscode
-*.bbl
-*.gz
-*.txt
+.DS_store
+
+# latex auxiliary files
 *.aux
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.gz
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.txt
+*.xml
+
+# pdf output
 *.pdf
