@@ -1,1 +1,265 @@
 \section{Theory}
+\subsection{Nuclear Structure and Energy Levels}
+An atomic nucleus consists of protons and neutrons, collectively known as nucleons, bound together by the strong nuclear interaction. The stability of a nucleus is determined by the interplay between the attractive nuclear force and the electrostatic repulsion between protons, along with the quantum-mechanical structure of the nucleonic system. The binding energy of a nucleus is defined as the energy required to separate it completely into its constituent nucleons. It is related to the mass of the nucleus through the mass-energy equivalence relation,
+\begin{equation}
+    B = \left[ Zm_p + (A-Z)m_n - M(A,Z) \right]c^2,
+\end{equation}
+where $A$ and $Z$ denote the mass number and atomic number, respectively, $m_p$ and $m_n$ are the proton and neutron masses, and $M(A,Z)$ is the nuclear mass.
+
+Like other quantum-mechanical bound systems, nuclei possess discrete energy levels. Their lowest-energy configuration is referred to as the ground state, while configurations with higher energies correspond to excited states. Nuclear excited states are characterized by their energy, total angular momentum (spin), and parity. These properties play an important role in determining the possible transitions between nuclear states and the radiation emitted during their de-excitation.
+
+Unstable nuclei can undergo spontaneous transformations into other nuclear configurations, releasing energy in the process. Depending on the energetics and the interactions involved, these transformations can occur through different modes of radioactive decay.
+
+\subsection{Modes of Radioactive Decay}
+
+Radioactive decay is the spontaneous transformation of an unstable nucleus into a more energetically favourable configuration. The principal modes of radioactive decay include alpha decay, beta decay, and gamma decay:
+
+\begin{itemize}
+\item{\textbf{Alpha decay}}
+
+In alpha decay, a nucleus emits an alpha particle, consisting of two protons and two neutrons (a helium-4 nucleus). The parent nucleus consequently transforms into a daughter nucleus with its mass number reduced by four and its atomic number reduced by two:
+\begin{equation}
+    {}^{A}_{Z}X
+    \longrightarrow
+    {}^{A-4}_{Z-2}Y
+    + {}^{4}_{2}\mathrm{He}.
+\end{equation}
+
+The process is energetically allowed when the total mass-energy of the final products is lower than that of the initial nucleus. The released energy is distributed primarily between the kinetic energies of the alpha particle and the recoiling daughter nucleus.
+
+A characteristic feature of alpha decay is that it can occur even when the alpha particle does not possess sufficient energy to overcome the nuclear potential barrier classically. Its emission is enabled by quantum tunnelling through the barrier, giving rise to a finite probability of escape from the nucleus.
+
+\item{\textbf{Beta decay}}
+
+Beta decay involves the transformation of a neutron into a proton or vice versa through the weak interaction. The two principal processes are beta-minus and beta-plus decay.
+
+In beta-minus decay, a neutron transforms into a proton, emitting an electron and an electron antineutrino:
+\begin{equation}
+    n \longrightarrow p + e^- + \bar{\nu}_e.
+\end{equation}
+At the nuclear level, this corresponds to
+\begin{equation}
+    {}^{A}_{Z}X
+    \longrightarrow
+    {}^{A}_{Z+1}Y + e^- + \bar{\nu}_e.
+\end{equation}
+
+In beta-plus decay, a proton transforms into a neutron, emitting a positron and an electron neutrino:
+\begin{equation}
+    p \longrightarrow n + e^+ + \nu_e,
+\end{equation}
+or, equivalently,
+\begin{equation}
+    {}^{A}_{Z}X
+    \longrightarrow
+    {}^{A}_{Z-1}Y + e^+ + \nu_e.
+\end{equation}
+
+Unlike alpha decay, the mass number remains unchanged in beta decay, while the atomic number changes by one. The available decay energy is shared among the emitted beta particle, the neutrino or antineutrino, and the recoiling daughter nucleus. Consequently, beta particles exhibit a continuous energy spectrum rather than a single discrete energy.
+
+Both alpha and beta decay can leave the daughter nucleus in an excited state. Such a nucleus may subsequently undergo electromagnetic de-excitation through the emission of gamma radiation, which is discussed in the next section.
+
+\end{itemize}
+
+\subsection{Gamma-Ray Emission and Nuclear Transitions}
+
+An excited nucleus can transition to a lower-energy nuclear state by emitting a photon, known as a gamma ray. Unlike alpha and beta decay, gamma emission does not change the atomic number or mass number of the nucleus; it only changes its internal energy configuration. A nuclear transition can be represented as
+\begin{equation}
+    {}^{A}_{Z}X^*
+    \longrightarrow
+    {}^{A}_{Z}X + \gamma,
+\end{equation}
+where the asterisk denotes an excited nuclear state.
+
+If the initial and final nuclear states have energies $E_i$ and $E_f$, respectively, energy conservation gives
+\begin{equation}
+    E_i-E_f = E_\gamma + E_{\mathrm{recoil}},
+\end{equation}
+where $E_\gamma$ is the emitted photon energy and $E_{\mathrm{recoil}}$ is the kinetic energy acquired by the recoiling nucleus. Since nuclear recoil energies are generally much smaller than the transition energy, the photon energy is approximately
+\begin{equation}
+    E_\gamma \simeq E_i-E_f.
+\end{equation}
+
+A nucleus may undergo several successive transitions before reaching its ground state. Such sequences are known as gamma-ray cascades. Each transition corresponds to a characteristic energy difference between two nuclear levels, allowing the nuclear energy-level structure to be investigated through gamma-ray spectroscopy.
+
+\subsubsection{Electromagnetic Multipole Transitions}
+
+Gamma-ray emission occurs through the electromagnetic interaction between the nuclear charge and current distributions and the radiation field. The emitted radiation can be classified into electromagnetic multipole transitions, characterized by their angular momentum $L$ and their electric or magnetic character (which are conventionally denoted by $EL$ and $ML$, respectively). The most commonly encountered multipolarities include electric dipole (E1), magnetic dipole (M1), electric quadrupole (E2), and magnetic quadrupole (M2) transitions.
+
+The multipole order $L$ specifies the angular momentum carried by the emitted photon. Conservation of total angular momentum therefore constrains the possible transitions between nuclear states. If the initial and final nuclear spins are $J_i$ and $J_f$, an allowed photon multipolarity must satisfy
+\begin{equation}
+    |J_i-J_f| \leq L \leq J_i+J_f,
+\end{equation}
+with $L\geq 1$, since a single real photon cannot carry zero angular momentum. In particular, a transition between two nuclear states with zero spin ($0\rightarrow 0$) cannot proceed through single-photon gamma emission.
+
+Parity conservation imposes an additional selection rule. For an electric multipole transition of order $L$, the parities of the initial and final states must satisfy
+\begin{equation}
+    \pi_i\pi_f=(-1)^L,
+\end{equation}
+whereas for a magnetic multipole transition,
+\begin{equation}
+    \pi_i\pi_f=(-1)^{L+1}.
+\end{equation}
+Thus, the spin and parity assignments of nuclear states restrict the multipolarities through which transitions can occur.
+
+The probability of a nuclear electromagnetic transition is governed by the corresponding transition matrix element, which depends on the initial and final nuclear states and the electromagnetic multipole operator involved. Consequently, energetically allowed transitions need not occur with equal probabilities. The relative strengths of transitions are commonly characterized by reduced transition probabilities, (B(EL)) and (B(ML)), for electric and magnetic multipole transitions, respectively. These quantities, together with the transition energy and multipolarity, determine the radiative transition rates. When multiple transitions are possible, their relative rates give rise to different branching ratios (proportion of individual transition rates to total decay rate), while competing processes such as internal conversion can further modify the probability of gamma-ray emission. The intensities ultimately observed in a gamma-ray spectrum also depend on the detector's energy-dependent efficiency, source geometry, and other experimental factors.
+
+In some cases, a nuclear transition can proceed through more than one multipolarity. Such transitions are referred to as mixed transitions; for example, a transition may contain both M1 and E2 contributions. The relative strengths of these contributions are characterized by a mixing ratio.
+
+\paragraph{Internal conversion}
+
+Gamma emission is not the only possible mechanism through which an excited nucleus can de-excite. An alternative process, known as internal conversion, involves the direct transfer of nuclear transition energy to an atomic electron, which is subsequently ejected from the atom. The kinetic energy of the conversion electron is approximately
+\begin{equation}
+    K_e = E_i-E_f-E_b,
+\end{equation}
+where $E_b$ is the binding energy of the electron's atomic shell.
+
+Internal conversion competes with gamma-ray emission and therefore affects the probability of observing a gamma ray corresponding to a particular nuclear transition. The relative importance of these processes depends on the nuclear transition energy, multipolarity, and atomic number of the emitting atom.
+
+\subsection{Radioactive Decay Law}
+
+Radioactive decay is a stochastic process in which the probability of an individual unstable nucleus decaying during a sufficiently small time interval is proportional to the duration of that interval. For a population of $N(t)$ identical radioactive nuclei, the rate of decrease in their number is therefore proportional to the number of undecayed nuclei:
+\begin{equation}
+    \frac{dN}{dt}=-\lambda N,
+\end{equation}
+where $\lambda$ is the decay constant, representing the probability per unit time of decay of an individual nucleus.
+
+Solving this differential equation gives the exponential decay law:
+\begin{equation}
+    N(t)=N_0e^{-\lambda t},
+\end{equation}
+where $N_0$ is the initial number of radioactive nuclei.
+
+The activity of a radioactive sample is defined as the number of nuclear decays occurring per unit time:
+\begin{equation}
+    A(t)=-\frac{dN}{dt}=\lambda N(t).
+\end{equation}
+It consequently follows the same exponential dependence:
+\begin{equation}
+    A(t)=A_0e^{-\lambda t}.
+\end{equation}
+
+Two important quantities associated with radioactive decay are the mean lifetime $\tau$ and the half-life $T_{1/2}$. The mean lifetime is the reciprocal of the decay constant,
+\begin{equation}
+    \tau=\frac{1}{\lambda},
+\end{equation}
+while the half-life is the time required for the number of undecayed nuclei, or equivalently the activity, to decrease to half its initial value:
+\begin{equation}
+    T_{1/2}=\frac{\ln 2}{\lambda}.
+\end{equation}
+
+For a radioactive source emitting gamma rays, the activity determines the overall rate of nuclear transformations. The emission rate of a particular gamma-ray line additionally depends on the probability of the corresponding transition and the number of photons emitted per decay. Thus, different gamma-ray transitions from the same radioactive source can exhibit different emission intensities.
+
+\subsection{Interaction of Gamma Rays with Matter}
+
+When gamma rays pass through matter, they interact with atomic electrons and nuclear electromagnetic fields through several possible mechanisms. The dominant interaction mechanisms depend on the incident photon energy and the properties of the absorbing material, particularly its atomic number. The three principal mechanisms relevant to gamma-ray spectroscopy are photoelectric absorption, Compton scattering, and pair production:
+
+\begin{itemize}
+\item{\textbf{Photoelectric absorption}}
+
+In photoelectric absorption, an incident photon is completely absorbed by an atom, transferring its energy to a bound electron and ejecting it from the atom. The kinetic energy of the ejected photoelectron is approximately
+\begin{equation}
+    K_e=E_\gamma-E_b,
+\end{equation}
+where $E_\gamma$ is the incident photon energy and $E_b$ is the binding energy of the electron.
+
+The resulting vacancy in the atomic electron shell is subsequently filled by an electron from a higher energy shell. This relaxation process can produce characteristic X-ray photons or Auger electrons (electrons ejected from the atom through non-radiative atomic relaxation). Since these secondary products may escape the active detector volume before depositing their energy, photoelectric absorption does not necessarily result in complete energy deposition.
+
+Photoelectric absorption is strongly dependent on the atomic number of the absorbing material and generally becomes less probable as the incident photon energy increases. It is therefore particularly significant in high-atomic-number materials and at relatively lower photon energies.
+
+\item{\textbf{Compton scattering}}
+
+Compton scattering occurs when an incident photon interacts with an electron, transferring part of its energy and momentum to the electron while emerging as a scattered photon with reduced energy. For an electron initially at rest and treated as free, conservation of energy and momentum gives the energy of the scattered photon as
+\begin{equation}
+    E'_\gamma =
+    \frac{E_\gamma}
+    {1+\dfrac{E_\gamma}{m_ec^2}(1-\cos\theta)},
+\end{equation}
+where $m_e$ is the electron mass and $\theta$ is the photon scattering angle.
+
+The kinetic energy acquired by the recoil electron is
+\begin{equation}
+    K_e=E_\gamma-E'_\gamma.
+\end{equation}
+
+The scattered photon may subsequently undergo further interactions within the material or escape from the detector. If it escapes after the initial scattering, only part of the incident photon energy is deposited. This contributes to the continuous distribution of deposited energies known as the Compton continuum.
+
+Compton scattering becomes increasingly important relative to photoelectric absorption over a broad intermediate range of gamma-ray energies. Its probability depends on the photon energy and the electron density of the absorbing material.
+
+\item{\textbf{Pair production}}
+
+Pair production is a process in which a sufficiently energetic photon is converted into an electron-positron pair in the electromagnetic field of a nucleus. The minimum photon energy required is the combined rest-mass energy of the two particles:
+\begin{equation}
+    E_{\gamma,\mathrm{min}}=2m_ec^2
+    \simeq 1.022~\mathrm{MeV}.
+\end{equation}
+
+Any photon energy exceeding this threshold is converted primarily into the kinetic energies of the electron and positron, together with a small recoil contribution to the nucleus. The positron subsequently loses energy through interactions with the surrounding material and eventually annihilates with an electron, typically producing two photons of energy $511~\mathrm{keV}$ each.
+
+If these annihilation photons are also absorbed within the detector, the full incident photon energy can be deposited. However, if one or both escape, the measured energy is reduced accordingly. This can give rise to single-escape and double-escape peaks in the measured spectrum, at energies
+\begin{equation}
+    E_{\mathrm{SE}}=E_\gamma-511~\mathrm{keV},
+\end{equation}
+and
+\begin{equation}
+    E_{\mathrm{DE}}=E_\gamma-1022~\mathrm{keV},
+\end{equation}
+respectively.
+
+The relative importance of pair production increases with photon energy and is also strongly influenced by the atomic number of the absorbing material.
+\end{itemize}
+
+\subsection{Formation and Characteristics of Gamma-Ray Spectra}
+
+The different gamma-ray interaction mechanisms give rise to distinct energy-deposition patterns within a detector. A gamma-ray spectrometer records a distribution of events according to the energy deposited during individual detection events. The measured spectrum exhibits characteristic features corresponding to the different modes of interaction of gamma rays with the detector material. The positions of full-energy photopeaks indicate the energies of the incident gamma rays, while features such as the Compton continuum and escape peaks arise from incomplete energy deposition.
+
+\paragraph{Photopeak}
+
+When the entire energy of an incident gamma-ray photon is deposited within the detector, the event contributes to the full-energy peak, commonly known as the photopeak. Although photoelectric absorption can produce such an event directly, full-energy deposition can also result from a sequence of interactions, such as one or more Compton scatterings followed by photoelectric absorption of the remaining photon.
+
+Since nuclear transitions produce gamma rays with characteristic energies, their complete absorption gives rise to peaks at the corresponding energies in the measured spectrum. These events accumulate around the full incident photon energy, producing a characteristic peak. Due to statistical fluctuations in the detector response, the measured pulse amplitudes exhibit a distribution rather than a single value, resulting in a broadened photopeak. In contrast, events involving incomplete energy deposition generally contribute to broader spectral distributions, such as the Compton continuum. These photopeaks are particularly useful for identifying radioactive sources and determining gamma-ray transition energies.
+
+\paragraph{Compton continuum and Compton edge}
+
+When a gamma-ray photon undergoes Compton scattering and the scattered photon escapes the detector, only the energy transferred to the recoil electron is deposited. Since the energy transfer depends on the scattering angle, a continuous range of deposited energies is possible, producing the Compton continuum.
+
+The maximum energy transfer occurs when the photon is scattered through an angle of $180^\circ$, corresponding to backscattering. The maximum recoil-electron energy is therefore
+\begin{equation}
+    K_{\mathrm{max}} =
+    E_\gamma-
+    \frac{E_\gamma}
+    {1+\dfrac{2E_\gamma}{m_ec^2}}.
+\end{equation}
+This upper limit gives rise to a characteristic feature in the spectrum known as the Compton edge.
+
+\paragraph{Escape peaks}
+
+At sufficiently high photon energies, pair production can occur within the detector. If one or both of the resulting $511~\mathrm{keV}$ annihilation photons escape without depositing their energy, the recorded energy is lower than the incident photon energy by $511~\mathrm{keV}$ or $1022~\mathrm{keV}$. The resulting features are known as the single-escape and double-escape peaks, respectively.
+
+\paragraph{Energy resolution}
+
+The peaks observed in a gamma-ray spectrum have finite widths rather than being perfectly sharp. This broadening arises from statistical fluctuations in the energy-deposition and signal-generation processes, as well as variations in the detector response and associated electronics.
+
+The ability of a spectrometer to distinguish between two nearby gamma-ray energies is characterized by its energy resolution, commonly expressed as
+\begin{equation}
+    R=\frac{\mathrm{FWHM}}{E_{\mathrm{peak}}}\times 100\%,
+\end{equation}
+where $\mathrm{FWHM}$ is the full width at half maximum of a photopeak and $E_{\mathrm{peak}}$ is its centroid energy. A smaller value of $R$ corresponds to better energy resolution.
+
+\subsection{Gamma-Ray Spectroscopy and Energy Calibration}
+
+Gamma-ray spectroscopy involves measuring the energy distribution of gamma radiation emitted by radioactive sources. Since different nuclear transitions produce photons with characteristic energies, the resulting spectrum can be used to identify radioactive isotopes and investigate their nuclear decay schemes.
+
+In a scintillation-based gamma-ray spectrometer, the energy deposited by an incident photon ultimately produces an electrical pulse whose amplitude is related to the deposited energy. A multichannel analyzer (MCA) sorts these pulses according to their amplitudes and assigns them to corresponding channel numbers. The resulting spectrum is initially represented as a histogram of counts against channel number rather than directly against photon energy.
+
+An energy calibration is therefore required to establish the relationship between the MCA channel number and the corresponding gamma-ray energy. For a detector exhibiting an approximately linear response, this relationship can be expressed as
+\begin{equation}
+    E=aC+b,
+\end{equation}
+where $E$ is the gamma-ray energy, $C$ is the channel number, and $a$ and $b$ are the calibration slope and offset, respectively.
+
+The calibration is performed using reference sources with well-established gamma-ray emission energies. Since complete-energy-deposition events accumulate around the incident photon energy, they produce identifiable photopeaks in the measured spectrum. By determining the channel positions of these photopeaks and associating them with the corresponding known photon energies, the calibration parameters can be obtained through a suitable fit.
+
+The radioactive isotope $^{152}\mathrm{Eu}$ is commonly used as a gamma-ray calibration source because it exhibits numerous well-characterized gamma-ray emission lines spanning a relatively broad energy range. These lines provide multiple reference points for establishing the channel-to-energy correspondence.
+
+Once the calibration has been determined, the measured channel positions of photopeaks from other radioactive sources can be converted into gamma-ray energies. These energies can then be compared with known nuclear transition energies to identify the corresponding emissions and investigate the radioactive material under study.
