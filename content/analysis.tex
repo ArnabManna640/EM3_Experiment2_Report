@@ -1,7 +1,15 @@
 \section{Analysis}\label{sec:analysis}
 
 \subsection{Experimental Data}
-The experimental data consist of events recorded using a LaBr$_3$(Ce) scintillation detector while measuring the gamma-ray spectrum of a $^{152}\mathrm{Eu}$ source. Each recorded event contains information about its associated channel, together with an event flag.
+The experimental data consist of events recorded using a LaBr$_3$(Ce) scintillation detector while measuring the gamma-ray spectrum of a $^{152}\mathrm{Eu}$ source. The data contains 6 columns:
+\begin{description}
+    \item[\texttt{BOARD}:] Identifies the digitizer board that recorded the event.
+    \item[\texttt{CHANNEL}:] Identifies the input channel of the digitizer to which the detector signal was connected.
+    \item[\texttt{TIMETAG}:] Records the event timestamp as a digitizer clock count, allowing the temporal ordering and timing of events to be determined.
+    \item[\texttt{ENERGY}:] Stores the integrated charge measured using a long integration gate, which serves as the primary parameter for constructing the gamma-ray energy spectrum.
+    \item[\texttt{ENERGYSHORT}:] Stores the integrated charge measured using a shorter integration gate, providing an additional parameter useful for pulse-shape analysis.
+    \item[\texttt{FLAGS}:] Contains hexadecimal status bits encoding additional information about the recorded event.
+\end{description}
 
 \subsection{Identification of Prominent Peaks}
 We plotted a histogram with 8192 equally spaced bins over the range of the recorded uncalibrated energy. The resulting histogram \cref{fig:spectrum} represents the number of detected events in each bin and provides the experimental gamma-ray spectrum. The obtained histogram contains statistical fluctuations arising from the finite number of recorded events. These fluctuations can produce small local maxima that should not necessarily be interpreted as individual gamma-ray peaks.
@@ -13,12 +21,12 @@ We plotted a histogram with 8192 equally spaced bins over the range of the recor
 	\label{fig:spectrum}
 \end{figure}
 
-To obtain a more stable representation of the spectrum, we applied Gaussian smoothing to the histogram using a one-dimensional Gaussian filter with a standard deviation of 5. The smoothing suppresses short-scale statistical fluctuations while retaining the overall structure and locations of the prominent spectral features.
+To obtain a more stable representation of the spectrum, we applied Gaussian smoothing to the histogram using a one-dimensional Gaussian kernel with standard deviation 5 bins. The smoothing suppresses short-scale statistical fluctuations while retaining the overall structure and locations of the prominent spectral features.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{Images/spectrum_smoothed.jpg}
-	\caption{The histogram \cref{fig:spectrum} smoothed with a Gaussian of standard deviation of 5.}
+	\caption{Histogram from \cref{fig:spectrum} smoothed using a Gaussian kernel with standard deviation 5 bins.}
 	\label{fig:spectrum smoothed}
 \end{figure}
 
@@ -39,7 +47,7 @@ Here, $A$ represents the peak amplitude, $x_0$ is the Gaussian centre, and $\sig
 	\label{fig:gaussian fit}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{Images/detected_peaks.jpg}
     \caption{Detected peaks with bar height representing relative intensity determined from the amplitude of \cref{eq:peak fit}.}
@@ -122,37 +130,38 @@ The quality of the linear calibration was evaluated using the root-mean-square e
     \left(E_i-E_{\mathrm{fit},i}\right)^2}.
 \end{equation}
 
-The resulting calibration equation is
+The set of reference energies for the lowest RMSE is given in \cref{tab:calibration}. The corresponding calibration equation is
 \begin{equation}
     \boxed{E(x)=-0.51337+1.19174x},
+    \label{eq:calibration}
 \end{equation}
-where $E$ is expressed in keV and $x$ denotes the measured histogram coordinate.
+where $E$ is expressed in keV and $x$ denotes the measured histogram coordinate. The RMSE is 2.9 keV.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Images/callibration.jpg}
-	\caption{The calibration plot between the uncalibrated energies and the best matching reference energies.}
+	\caption{The calibration plot between the uncalibrated energies and the best matching reference energies\cref{eq:calibration}.}
 	\label{fig:calibration}
 \end{figure}
 
-Using the calibration equation, the energies corresponding to the seven measured peak positions can be calculated. The results are presented in \cref{tab:calibration}. The residual is defined as
+Using the calibration equation, the energies corresponding to the seven measured peak positions can be calculated. The residual is defined as
 \begin{equation}
     \Delta E=E_{\mathrm{reference}}-E_{\mathrm{calibrated}}.
 \end{equation}
 
 \begin{table}[htbp]
     \centering
-    \begin{tabular}{cccc}
+    \begin{tabular}{ccccc}
         \toprule
-        Measured position & Reference energy (keV) & Calibrated energy (keV) & Residual (keV) \\
+        Peak & Position & Reference energy (keV) & Calibrated energy (keV) & Residual (keV) \\
         \midrule
-        100.21  & 121.78  & 118.91  & 2.88 \\
-        205.72  & 244.70  & 244.66  & 0.04 \\
-        289.30  & 344.28  & 344.26  & 0.01 \\
-        656.16  & 778.90  & 781.46  & -2.55 \\
-        812.19  & 964.06  & 967.41  & -3.35 \\
-        916.75  & 1089.74 & 1092.02 & -2.28 \\
-        1177.49 & 1408.01 & 1402.76 & 5.26 \\
+        1 & 100.21  & 121.78  & 118.91  & 2.88 \\
+        2 & 205.72  & 244.70  & 244.66  & 0.04 \\
+        3 & 289.30  & 344.28  & 344.26  & 0.01 \\
+        4 & 656.16  & 778.90  & 781.46  & -2.55 \\
+        5 & 812.19  & 964.06  & 967.41  & -3.35 \\
+        6 & 916.75  & 1089.74 & 1092.02 & -2.28 \\
+        7 & 1177.49 & 1408.01 & 1402.76 & 5.26 \\
         \bottomrule
     \end{tabular}
     \caption{Comparison of reference energies with the energies obtained from the linear calibration. The RMSE is 2.9 keV.}

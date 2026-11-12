@@ -1,4 +1,12 @@
 \section{Discussion}
-An additional point is the presence of two candidate reference transitions at 1085.84 keV and 1089.74 keV. Their separation is only approximately 3.90 keV, whereas the fitted energy width of the experimental feature assigned to the latter is approximately 48.57 keV. Consequently, these transitions cannot be resolved as separate peaks in the present measured spectrum using the fitted peak model.
+\begin{itemize}
+	\item The detection procedure identifies prominent features rather than every possible gamma-ray transition. Weak transitions and closely spaced neighbours therefore remain unresolved or fall below the detection threshold.
 
-The detection procedure identifies prominent features rather than every possible gamma-ray transition. Consequently, weak transitions and unresolved neighbouring peaks may not appear as separate detected maxima.
+	\item  The residuals in \cref{tab:calibration} show a systematic curvature (positive at both ends, negative in the middle), so the linear fit is only approximate. A quadratic term, $E(x) = a + bx + cx^2$, can be added and compared with the linear fit through its residuals and RMSE.
+
+	\item The unresolved structure near 910-930 (\cref{fig:gaussian fit}) can be fitted with a multi-Gaussian model instead of a single Gaussian.
+
+	\item The calibration could be independently checked using additional radioactive sources with well-established gamma-ray energies, such as $^{137}\mathrm{Cs}$ and $^{60}\mathrm{Co}$.
+
+	\item The uncertainties in the fitted peak centroids can be propagated to estimate the uncertainties in the calibration coefficients, providing a more complete assessment of the reliability of the energy calibration.
+\end{itemize}
