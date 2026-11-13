@@ -38,7 +38,7 @@ The peak positions obtained from the detection algorithm provide initial estimat
     N(x) = A\exp\left[-\frac{(x-x_0)^2}{2\sigma^2}\right] + a + bx.
     \label{eq:peak fit}
 \end{equation}
-Here, $A$ represents the peak amplitude, $x_0$ is the Gaussian centre, and $\sigma$ characterises the width of the Gaussian distribution. The parameters $a$ and $b$ describe the local background level and its linear variation across the fitting region.
+Here, $A$ represents the peak amplitude, $x_0$ is the Gaussian center, and $\sigma$ characterizes the width of the Gaussian distribution. The parameters $a$ and $b$ describe the local background level and its linear variation across the fitting region.
 
 \begin{figure}[h]
 	\centering
@@ -54,7 +54,7 @@ Here, $A$ represents the peak amplitude, $x_0$ is the Gaussian centre, and $\sig
     \label{fig:detetcted peaks}
 \end{figure}
 
-The resulting fitted peak positions and widths are summarised in \cref{tab:detected peaks}.
+The resulting fitted peak positions and widths are summarized in \cref{tab:detected peaks}.
 
 \begin{table}[htbp]
     \centering
@@ -71,12 +71,12 @@ The resulting fitted peak positions and widths are summarised in \cref{tab:detec
         7 & 1177.49 & 19.34 & 8.04 \\
         \bottomrule
     \end{tabular}
-    \caption{Gaussian fit result of each peak. The peak width is $2\sigma$ and intensity is the amplitude $A$ in \cref{eq:peak fit}. The intensities have been normalised with respect to the largest intensity.}
+    \caption{Gaussian fit result of each peak. The peak width is $2\sigma$ and intensity is the amplitude $A$ in \cref{eq:peak fit}. The intensities have been normalized with respect to the largest intensity.}
     \label{tab:detected peaks}
 \end{table}
 
 \subsection{Comparison with Reference Gamma-Ray Energies}
-After determining the experimental peak positions, we compared the measured spectrum with reference gamma-ray transition energies associated with $^{152}\mathrm{Eu}$ from the \textbf{ENSDF} dataset\cite{ensdf}. The dataset contains all gamma transtitions including metastable states. The lifetime of the metastable states are very small\cite{enwiki:1352528506}. Assuming the source is old enough, we ignored those transitions.
+After determining the experimental peak positions, we compared the measured spectrum with reference gamma-ray transition energies associated with $^{152}\mathrm{Eu}$ from the \textbf{ENSDF} dataset\cite{ensdf}. The dataset contains all gamma transitions including metastable states. The lifetime of the metastable states are very small\cite{enwiki:1352528506}. Assuming the source is old enough, we ignored those transitions.
 
 To restrict the comparison to sufficiently prominent reference transitions, we retained only entries having relative intensity greater than 5. This selection yielded 13 candidate reference gamma-ray energies as shown in \cref{tab:actual energies} and \cref{fig:actual energies}.
 
@@ -84,7 +84,7 @@ To restrict the comparison to sufficiently prominent reference transitions, we r
     \centering
     \begin{tabular}{c c c c}
         \hline
-        Peak & Energy (keV) & Relative intensity (\%) & Decay type \\
+        Peak & Energy (Kev) & Relative intensity (\%) & Decay type \\
         \hline
         1 & 121.78  & 100.0000 & EC \\
         2 & 244.70  & 26.46  & EC \\
@@ -101,7 +101,7 @@ To restrict the comparison to sufficiently prominent reference transitions, we r
         13 & 1408.01 & 73.14  & EC \\
         \hline
     \end{tabular}
-    \caption{Reference gamma-ray energies from the \textbf{ENSDF} dataset. EC corresponds to elentron capture. The intensities have been normalised with respect to the largest intensity.}
+    \caption{Reference gamma-ray energies from the \textbf{ENSDF} dataset. EC corresponds to electron capture. The intensities have been normalized with respect to the largest intensity.}
     \label{tab:actual energies}
 \end{table}
 
@@ -135,7 +135,7 @@ The set of reference energies for the lowest RMSE is given in \cref{tab:calibrat
     \boxed{E(x)=-0.51337+1.19174x},
     \label{eq:calibration}
 \end{equation}
-where $E$ is expressed in keV and $x$ denotes the measured histogram coordinate. The RMSE is 2.9 keV.
+where $E$ is expressed in Kev and $x$ denotes the measured histogram coordinate. The RMSE is 2.9 Kev.
 
 \begin{figure}[h]
 	\centering
@@ -153,7 +153,7 @@ Using the calibration equation, the energies corresponding to the seven measured
     \centering
     \begin{tabular}{ccccc}
         \toprule
-        Peak & Position & Reference energy (keV) & Calibrated energy (keV) & Residual (keV) \\
+        Peak & Position & Reference energy (Kev) & Calibrated energy (Kev) & Residual (Kev) \\
         \midrule
         1 & 100.21  & 121.78  & 118.91  & 2.88 \\
         2 & 205.72  & 244.70  & 244.66  & 0.04 \\
@@ -164,6 +164,6 @@ Using the calibration equation, the energies corresponding to the seven measured
         7 & 1177.49 & 1408.01 & 1402.76 & 5.26 \\
         \bottomrule
     \end{tabular}
-    \caption{Comparison of reference energies with the energies obtained from the linear calibration. The RMSE is 2.9 keV.}
+    \caption{Comparison of reference energies with the energies obtained from the linear calibration. The RMSE is 2.9 Kev.}
     \label{tab:calibration}
 \end{table}
